@@ -20,10 +20,11 @@ function App() {
   return (
     <div className="app">
       <div className="search">
+        <h2>Weather App</h2>
         <input
           value={location}
           onChange={(event) => setLocation(event.target.value)}
-          placeholder="Enter Location"
+          placeholder="Enter a Location"
           onKeyDown={searchLocation}
         ></input>
       </div>
@@ -43,15 +44,15 @@ function App() {
         {data.name != undefined && (
           <div className="bottom">
             <div className="feels">
-              <p>Feels like</p>
+              <p className="bottomFont">Feels Like</p>
               {data.main ? <p>{data.main.feels_like}°c</p> : null}
             </div>
             <div className="humidity">
-              <p>Humidity</p>
+              <p className="bottomFont">Humidity</p>
               {data.main ? <p>{data.main.humidity}%</p> : null}
             </div>
             <div className="wind">
-              <p>Wind Speed</p>
+              <p className="bottomFont">Wind Speed</p>
               {data.wind ? <p>{data.wind.speed}mph</p> : null}
             </div>
           </div>
